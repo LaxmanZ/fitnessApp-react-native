@@ -7,7 +7,7 @@ const FitnessCards = () => {
   const FitnessData = fitness;
   const handlePress = () => {};
   return (
-    <View>
+    <View style={{ marginTop: 65 }}>
       {FitnessData.map((item, index) => (
         <Pressable
           onPress={handlePress}

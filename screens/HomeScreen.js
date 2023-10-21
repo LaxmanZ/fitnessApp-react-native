@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import React from 'react';
 import FitnessCards from '../components/FitnessCards';
 
 const HomeScreen = () => {
   return (
-    <View style={{ marginTop: 40}}>
+    <ScrollView style={{ marginTop: 40 }}>
       <View
         style={{
           backgroundColor: '#cd853f',
@@ -62,9 +62,9 @@ const HomeScreen = () => {
             }}
           />
         </View>
-        <FitnessCards />
       </View>
-    </View>
+      <FitnessCards />
+    </ScrollView>
   );
 };
 
