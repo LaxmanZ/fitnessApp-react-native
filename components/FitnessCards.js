@@ -15,7 +15,7 @@ const FitnessCards = () => {
           style={{ margin: 10, alignItems: 'center', justifyContent: 'center' }}
         >
           <Image
-            style={{ width: '95%', height: 140, borderRadius: 8 }}
+            style={{ width: '90%', height: 140, borderRadius: 8 }}
             source={{ uri: item.image }}
           />
           <Text
