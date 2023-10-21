@@ -24,7 +24,7 @@ const FitnessCards = () => {
               fontWeight: 'bold',
               position: 'absolute',
               top: 20,
-              left: 20,
+              left: 30,
               color: 'white',
             }}
           >
@@ -36,7 +36,7 @@ const FitnessCards = () => {
               position: 'absolute',
               color: 'white',
               bottom: 15,
-              left: 20,
+              left: 25,
             }}
             name="lightning-bolt"
             size={24}
