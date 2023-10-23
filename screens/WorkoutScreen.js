@@ -6,14 +6,17 @@ import {
   Text,
   View,
 } from 'react-native';
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, AntDesign } from '@expo/vector-icons';
+import { FitnessItems } from '../Context';
 
 const WorkoutScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
   //   console.log(route.params);
+
+  const { completed, setCompleted } = useContext(FitnessItems);
 
   return (
     <>
@@ -47,23 +50,28 @@ const WorkoutScreen = () => {
             />
 
             <View style={{ marginLeft: 13 }}>
-              <Text style={{ fontSize: 16, fontWeight: 'bold' }}>
+              <Text style={{ fontSize: 16, fontWeight: 'bold', width: 200 }}>
                 {item.name}
               </Text>
               <Text style={{ color: 'gray', marginTop: 4, fontSize: 15 }}>
                 x{item.sets}
               </Text>
             </View>
+
+            {completed.includes(item.name) ? (
+              <AntDesign style={{marginLeft: 40}} name="checkcircle" size={24} color="green" />
+            ) : null}
           </Pressable>
         ))}
       </ScrollView>
 
       <Pressable
-        onPress={() =>
+        onPress={() => {
           navigation.navigate('Fitscreen', {
             excersises: route.params.excersises,
-          })
-        }
+          });
+          setCompleted([]);
+        }}
         style={{
           marginLeft: 'auto',
           marginRight: 'auto',

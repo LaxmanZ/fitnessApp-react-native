@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useRoute, useNavigation } from '@react-navigation/native';
+import { FitnessItems } from '../Context';
 
 const FitScreen = () => {
   const route = useRoute();
@@ -9,6 +10,17 @@ const FitScreen = () => {
   const excersise = route.params.excersises;
   const current = excersise[index];
   //   console.log(current);
+  const {
+    completed,
+    setCompleted,
+    workout,
+    setWorkout,
+    calories,
+    setCalories,
+    minutes,
+    setMinutes,
+  } = useContext(FitnessItems);
+  // console.log(completed, 'completed Excersise');
 
   return (
     <View style={{ marginTop: 35 }}>
@@ -59,6 +71,10 @@ const FitScreen = () => {
         <Pressable
           onPress={() => {
             navigation.navigate('Rest');
+            setCompleted([...completed, current.name]);
+            setWorkout(workout + 1);
+            setMinutes(minutes + 2.5);
+            setCalories(calories + 6.3);
             setTimeout(() => {
               setIndex(index + 1);
             }, 2000);
