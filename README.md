@@ -66,13 +66,14 @@ Before you begin, ensure you have met the following requirements:
 Here is a brief overview of project's Folder Structure.
 
 - `components/` - This Folder contains Reusable React components.
-- `data` - This This Folder contains excersise data.
+- `data/` - This This Folder contains excersise data.
 - `screens/` - This Folder contains Different app screens.
 - `App.js` - The main entry point of your app.
-- `context/` - Context API for state management.
+- `context.js` - Context API for state management.
 - `package.json` - Project dependencies and scripts.
 
 If You Like the Project. Then give a Star
+
 Thank You
 
 If Your are looking to hire a react-native/reactjs developer please contact me laxmanbhajantri547@gmail.com
