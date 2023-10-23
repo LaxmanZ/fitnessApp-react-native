@@ -72,7 +72,7 @@ Here is a brief overview of project's Folder Structure.
 - `context.js` - Context API for state management.
 - `package.json` - Project dependencies and scripts.
 
-If You Like the Project. Then give a Star
+If You Like the my repositories. Then give a Star
 
 Thank You
 
