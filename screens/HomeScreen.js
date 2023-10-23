@@ -4,7 +4,7 @@ import FitnessCards from '../components/FitnessCards';
 
 const HomeScreen = () => {
   return (
-    <ScrollView style={{ marginTop: 40 }}>
+    <ScrollView style={{ marginTop: 35 }}>
       <View
         style={{
           backgroundColor: '#cd853f',

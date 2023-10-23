@@ -2,15 +2,22 @@ import { Pressable, StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
 import fitness from '../data/fitness';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 const FitnessCards = () => {
   const FitnessData = fitness;
-  const handlePress = () => {};
+  const navigation = useNavigation();
   return (
     <View style={{ marginTop: 65 }}>
       {FitnessData.map((item, index) => (
         <Pressable
-          onPress={handlePress}
+          onPress={() =>
+            navigation.navigate('Workout', {
+              image: item.image,
+              excersises: item.excersises,
+              id: item.id,
+            })
+          }
           key={index}
           style={{ margin: 10, alignItems: 'center', justifyContent: 'center' }}
         >
