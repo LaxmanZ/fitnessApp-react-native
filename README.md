@@ -36,21 +36,21 @@ Before you begin, ensure you have met the following requirements:
 
 2. Navigate to the project directory:
 
-```bash
-cd fitnessApp-react-native
-```
+   ```bash
+   cd fitnessApp-react-native
+   ```
 
 3. Install dependencies:
 
-```bash
-expo install
-```
+   ```bash
+   expo install
+   ```
 
 4. Start the development server:
 
-```bash
-expo start
-```
+   ```bash
+   expo start
+   ```
 
 5. Use Expo Go on your mobile device or an emulator to run the app. Scan the QR code provided by Expo.
 
